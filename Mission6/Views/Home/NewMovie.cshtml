@@ -1,9 +1,15 @@
+@model Mission6.Models.Movie
+
 <h1>Add a New Movie: </h1>
 
 <form method="post">
     
-    <label asp-for="CategoryTitle">Category Title</label>
-    <input asp-for="CategoryTitle"/>
+    <label asp-for="Category">Category</label>
+    <input asp-for="Category"/>
+    <br/>
+    <br/>
+    <label asp-for="Title">Title</label>
+    <input asp-for="Title"/>
     <br/>
     <br/>
     <label asp-for="Year">Year</label>
@@ -26,6 +32,7 @@
     <br/>
     <label asp-for="Edited">Edited </label>
     <select asp-for="Edited">
+        <option value="">--- Select one ---</option>
         <option value="true">Yes</option>
         <option value="false">No</option>
     </select>
@@ -39,4 +46,7 @@
     <input asp-for="Notes"/>
     <br/>
     <br/>
+    <button type="submit">Enter Movie</button>
+    
+    
 </form>

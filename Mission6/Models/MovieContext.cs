@@ -1,12 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Mission6.Models;
-
-public class MovieContext : DbContext
+namespace Mission6.Models
 {
-    // GET
-    public MovieContext(DbContextOptions<MovieContext> options) : base(options)
-    {}
-    
-    public DbSet<Movie> Movies { get; set; }
+
+    public class MovieContext : DbContext
+    {
+        public MovieContext(DbContextOptions<MovieContext> options) : base(options)
+        {
+        }
+
+        public DbSet<Movie> Movies { get; set; }
+    }
 }
